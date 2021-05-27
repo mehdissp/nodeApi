@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+
+        <div class="container">
+                <div class="row">
+                    <form action="#" id="form">
+                        <div class="form-group">
+                            <label>تصویر مقاله : </label>
+                            <input type="file" id="image" name="image" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-danger">ارسال</button>
+                    </form>
+                </div>
+            </div>
+
+    <script>
+
+        document.getElementById('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            let data = {
+            query : `
+                mutation addMultimedia($image : Upload!){
+                    mutimedia(image : $image) {
+                        status
+                    }
+                }
+            `,
+            variables : {
+                "image" : null,
+            }
+        };
+
+        let map = {
+            0 : ['variables.image'],
+        }
+
+        let file = document.getElementById('image').files[0];
+        let formD = new FormData();
+        formD.append('operations' , JSON.stringify(data));
+        formD.append('map', JSON.stringify(map));
+        formD.append(0, file, file.name);
+
+        let optitons = {
+            method : 'POST',
+            headers : {
+                'token' : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTUxNWViMzlmYzkwMTkzNDIwZDhiMyIsImlhdCI6MTYyMDc0NDYyMSwiZXhwIjoxNjIwODMxMDIxfQ.EQngLZ3fR9rRuGOmru1M30EkvvPeDz6FXjNZkwGNzt0'
+            },
+            body : formD
+        };
+
+        let url = 'http://localhost:4000/graphql';
+
+        fetch(url,optitons)
+            .then(res => res.json())
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
+        })
+
+    </script>
+    
+</body>
+</html>
