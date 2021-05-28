@@ -1,0 +1,79 @@
+git init => azafe kardan git be project
+
+git add .  =>hame ro  ezafe mikone
+
+git status => vaziyat neshon mide
+
+git diff => tagirat neshon mide
+
+git commit -m "test"   => bad az git add . bayad zade she to dakhle kar beshine
+
+git commit -a -m " ss"  => kar add va cmmit hamzaman anjam mide
+
+git diff --help  => browser baz mikone kamel yad mide
+
+git restore --staged . => agar . bezanam hame ro barmigardone agar esme safharo begam ono fgt miyare
+
+git restore server.js => tagirat dar file ra barmigardone
+
+git log => log haye ke gablan dashtim miyare
+
+git log --oneline => to ye khat neshon mide
+
+git log -2 --oneline => to ye khat neshon mide (-2)tedade  log miyare
+
+git log -p => be hamrah tagirat ke darim miyare
+
+git reset (id log mord nazar)  => barmigarde be halat aval
+
+git rese -hard => kolan barmigarde be aval kar
+
+git branch namebranch  =>  sakth branch
+
+git branch -a => list branch
+
+git checkout mehdi1 => swich kardan roye ye branch
+
+git branch -d mehdi2 => hazf brach 
+
+git checkout -b ApiNodeFforReact => SAKHT swich hamzaman
+
+--*******************************************************************************************************--
+
+baraye merge mirim roye branch aslimon minevisim
+
+git merge nameonbranchke garare be branch asli azafe beshe
+
+--*******************************************************************************************************---
+
+git log --graph  => sakht log graphicie
+
+dakhele gitbash toch gitignore bezani 
+
+
+git config user.name "mehdi mahdavi"  =>config local
+
+git config --global user.name "mehdi mahdavi" => config koli
+
+------------------------------
+
+var site github mishim ye hesab dorost mikonim
+
+git remote add origin https://github.com/mehdissp/nodeApi.git => azafe kardan file be github
+
+git remote => mitonim remote haro bebinim
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
