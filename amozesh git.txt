@@ -63,6 +63,9 @@ git remote add origin https://github.com/mehdissp/nodeApi.git => azafe kardan fi
 
 git remote => mitonim remote haro bebinim
 
+git push  => akhar sar baraye azafe kardan file be github (bayad ba one branch ke mikham )
+
+
 
 
 
