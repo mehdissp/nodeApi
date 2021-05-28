@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate-v2');
 const Schema = mongoose.Schema;
-//e
+//e1 for appinode
 
 const Brand =Schema({
     name:{type:String,required:true},
