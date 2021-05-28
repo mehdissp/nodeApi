@@ -65,10 +65,10 @@ git remote => mitonim remote haro bebinim
 
 git push  => akhar sar baraye azafe kardan file be github (bayad ba one branch ke mikham )
 
+git pull origin => miri akharin tagir miyare azafe mikone
 
+git clone addressite => mire kolesho donwload mikone miyare
 
-
-testtttttttttttttttttttt
 
 
 
